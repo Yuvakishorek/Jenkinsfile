@@ -3,17 +3,17 @@ pipeline {
     stages {      
         stage('Build') { 
             steps {
-           sh "mvn Build"
+           sh "mvnBuild"
             }
         }
         stage('Test') { 
             steps {
-          sh "mvn Test"
+          sh "mvnTest"
             }
         }
         stage('Deploy') { 
             steps {
-              sh "mvn Deploy"
+              sh "mv Deploy"
             }
         }
     }
