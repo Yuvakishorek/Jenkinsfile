@@ -1,14 +1,2 @@
-pipeline
-{
-  agent any 
-  stages
- {      
-   stage('Build') 
- { 
-   steps
- {
-   sh "mvnBuild"
-   }
-   }
- }
-}
+echo "yuvajash"
+echo "vb"
