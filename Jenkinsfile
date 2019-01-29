@@ -1,25 +1,15 @@
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('clean') {
-        steps {
-            sh "mvn clean"
-        }
-        }        
-        stage('Build') { 
+        stage('Example') {
             steps {
-           sh "mvn Build"
+                echo 'Hello World'
             }
         }
-        stage('Test') { 
-            steps {
-          sh "mvn Test"
-            }
-        }
-        stage('Deploy') { 
-            steps {
-              sh "mvn Deploy"
-            }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
     }
 }
