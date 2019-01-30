@@ -1,0 +1,21 @@
+pipeline {
+        agent any
+        stage('Requirement') {
+steps {
+sh 'Req collection'
+}
+}
+                stages {
+                stage('Build') {
+                        steps {
+                         sh 'make'
+                                }
+                              }
+                        stage('test') {
+                        steps {
+                         sh 'make check'
+                        junit 'reports/**/*xml'
+                        }       
+}                               
+}
+}
